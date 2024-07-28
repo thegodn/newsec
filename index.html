@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Interactive Plant Store</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 550px;
+            width: 100%;
+        }
+        .image-section {
+            width: 60%;
+            background-color: #f0e6dc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main-image {
+            width: 80%;
+            height: 80%;
+            background-size: cover;
+            background-position: center;
+        }
+        .text-section {
+            width: 40%;
+            background-color: #7c8c7d;
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h2 {
+            margin-top: 0;
+            font-weight: normal;
+            font-size: 24px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: color 0.3s;
+            color: #d0d0d0;
+        }
+        li:hover {
+            color: white;
+        }
+        .active {
+            color: white;
+        }
+        p {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .see-more {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            align-self: flex-start;
+        }
+        .see-more:hover {
+            background-color: white;
+            color: #7c8c7d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <div id="main-image"></div>
+        </div>
+        <div class="text-section">
+            <h2>Product Categories</h2>
+            <ul>
+                <li data-image="url('https://gallerix.co.uk/img/hero/main.jpg?28')">Complementary Furnitures</li>
+                <li data-image="url('https://a.storyblok.com/f/165154/1280x720/1d75d692c3/hero-image_1280x720-3.jpg/m/')">Tabletop Accessories</li>
+                <li data-image="url('path/to/table-image.jpg')">Coffee & Side Table</li>
+                <li class="active" data-image="url('path/to/planter-image.jpg')">Planter</li>
+                <li data-image="url('path/to/clock-image.jpg')">Clock</li>
+            </ul>
+            <p>Add sincerity and warmth to your home with our Oobje brand, where you can find many colorful home decorations from coffee tables to dressers, from umbrella stands to woodsheds and even wine stands.</p>
+            <button class="see-more">SEE MORE</button>
+        </div>
+    </div>
+
+    <script>
+        const mainImage = document.getElementById('main-image');
+        const items = document.querySelectorAll('.text-section li');
+
+        items.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                mainImage.style.backgroundImage = item.dataset.image;
+            });
+
+            item.addEventListener('click', () => {
+                items.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+
+        // Set initial image
+        mainImage.style.backgroundImage = document.querySelector('.active').dataset.image;
+    </script>
+</body>
+</html>
