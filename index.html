@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rarart Interactive Store</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
@@ -44,15 +43,14 @@
         ul {
             list-style-type: none;
             padding: 0;
-            margin: 0 0 40px 0;
+            margin: 0 0 20px 0;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             cursor: pointer;
             transition: color 0.3s;
             color: #d0d0d0;
-            font-family: 'Kalam', cursive;
-            font-size: 28px;
+            font-size: 24px;
         }
         li:hover {
             color: white;
@@ -61,25 +59,23 @@
             color: white;
         }
         p {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             line-height: 1.5;
         }
         .kesfet {
-            background-color: #f2ede9;
-            border: none;
-            color: #7c8c7d;
-            padding: 15px 30px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 10px 20px;
             cursor: pointer;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: background-color 0.3s, color 0.3s;
             align-self: flex-start;
+            font-size: 16px;
+            text-transform: uppercase;
         }
         .kesfet:hover {
-            background-color: #e5dcd3;
+            background-color: white;
+            color: #7c8c7d;
         }
     </style>
 </head>
@@ -90,8 +86,8 @@
         </div>
         <div class="text-section">
             <ul>
-                <li class="active" data-image="url('https://gallerix.co.uk/img/hero/main.jpg?28')">Duvar Dekoru</li>
-                <li data-image="url('https://a.storyblok.com/f/165154/1280x720/1d75d692c3/hero-image_1280x720-3.jpg/m/')">Organizer</li>
+                <li class="active" data-image="url('path/to/duvar-dekoru.jpg')">Duvar Dekoru</li>
+                <li data-image="url('path/to/organizer.jpg')">Organizer</li>
                 <li data-image="url('path/to/ayna.jpg')">Ayna</li>
                 <li data-image="url('path/to/tepsi.jpg')">Tepsi</li>
                 <li data-image="url('path/to/cocuk-urunleri.jpg')">Çocuk Ürünleri</li>
@@ -102,7 +98,22 @@
     </div>
 
     <script>
-        // JavaScript remains the same as in the previous version
+        const mainImage = document.getElementById('main-image');
+        const items = document.querySelectorAll('.text-section li');
+
+        items.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                mainImage.style.backgroundImage = item.dataset.image;
+            });
+
+            item.addEventListener('click', () => {
+                items.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+
+        // Set initial image
+        mainImage.style.backgroundImage = document.querySelector('.active').dataset.image;
     </script>
 </body>
 </html>
