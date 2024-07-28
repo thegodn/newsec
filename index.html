@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Interactive Plant Store</title>
+    <title>Rarart Interactive Store</title>
     <style>
         body, html {
             margin: 0;
@@ -17,8 +17,7 @@
             width: 100%;
         }
         .image-section {
-            width: 60%;
-            background-color: #f0e6dc;
+            width: 50%;
             overflow: hidden;
             position: relative;
         }
@@ -33,7 +32,7 @@
             transition: opacity 0.3s ease;
         }
         .text-section {
-            width: 40%;
+            width: 50%;
             background-color: #7c8c7d;
             color: white;
             padding: 40px;
@@ -41,21 +40,17 @@
             flex-direction: column;
             justify-content: center;
         }
-        h2 {
-            margin-top: 0;
-            font-weight: normal;
-            font-size: 24px;
-        }
         ul {
             list-style-type: none;
             padding: 0;
-            margin: 20px 0;
+            margin: 0 0 20px 0;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             cursor: pointer;
             transition: color 0.3s;
             color: #d0d0d0;
+            font-size: 24px;
         }
         li:hover {
             color: white;
@@ -67,7 +62,7 @@
             margin-bottom: 20px;
             line-height: 1.5;
         }
-        .see-more {
+        .kesfet {
             background-color: transparent;
             border: 1px solid white;
             color: white;
@@ -75,8 +70,10 @@
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
             align-self: flex-start;
+            font-size: 16px;
+            text-transform: uppercase;
         }
-        .see-more:hover {
+        .kesfet:hover {
             background-color: white;
             color: #7c8c7d;
         }
@@ -88,16 +85,15 @@
             <div id="main-image"></div>
         </div>
         <div class="text-section">
-            <h2>Product Categories</h2>
             <ul>
-                <li data-image="url('https://gallerix.co.uk/img/hero/main.jpg?28')">Complementary Furnitures</li>
-                <li data-image="url('https://a.storyblok.com/f/165154/1280x720/1d75d692c3/hero-image_1280x720-3.jpg/m/')">Tabletop Accessories</li>
-                <li data-image="url('path/to/table-image.jpg')">Coffee & Side Table</li>
-                <li class="active" data-image="url('path/to/planter-image.jpg')">Planter</li>
-                <li data-image="url('path/to/clock-image.jpg')">Clock</li>
+                <li class="active" data-image="url('https://gallerix.co.uk/img/hero/main.jpg?28')">Duvar Dekoru</li>
+                <li data-image="url('https://a.storyblok.com/f/165154/1280x720/1d75d692c3/hero-image_1280x720-3.jpg/m/')">Organizer</li>
+                <li data-image="url('path/to/ayna.jpg')">Ayna</li>
+                <li data-image="url('path/to/tepsi.jpg')">Tepsi</li>
+                <li data-image="url('path/to/cocuk-urunleri.jpg')">Çocuk Ürünleri</li>
             </ul>
-            <p>Add sincerity and warmth to your home with our Oobje brand, where you can find many colorful home decorations from coffee tables to dressers, from umbrella stands to woodsheds and even wine stands.</p>
-            <button class="see-more">SEE MORE</button>
+            <p>Evinize zarafet ve sıcaklık katmak için Rarart tanışın. Duvar dekorları, düzenleyiciler ve daha fazlasıyla evinizi güzelleştirin. Her tarza uygun seçenekler mağazamızda sizi bekliyor.</p>
+            <button class="kesfet">Keşfet</button>
         </div>
     </div>
 
