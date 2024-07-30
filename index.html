@@ -63,8 +63,8 @@
             font-family: 'Great Vibes', sans-serif;
             font-size: 20px;
         }
-        .kesfet {
-            background-color: #f2ede9;
+         .kesfet {
+            background: linear-gradient(to bottom, #f7f3ef, #e5dcd3);
             border: none;
             color: #7c8c7d;
             padding: 15px 30px;
@@ -73,12 +73,31 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             border-radius: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: background-color 0.3s, color 0.3s;
+            box-shadow: 
+                0 2px 4px rgba(0,0,0,0.1),
+                0 4px 8px rgba(0,0,0,0.1),
+                inset 0 -2px 4px rgba(0,0,0,0.05),
+                inset 0 2px 4px rgba(255,255,255,0.5);
+            transition: all 0.3s ease;
+            position: relative;
+            top: 0;
             align-self: flex-start;
-       }
+        }
         .kesfet:hover {
-            background-color: #e5dcd3;
+            background: linear-gradient(to bottom, #f2ede9, #d8cfc6);
+            box-shadow: 
+                0 4px 8px rgba(0,0,0,0.15),
+                0 8px 16px rgba(0,0,0,0.15),
+                inset 0 -2px 4px rgba(0,0,0,0.1),
+                inset 0 2px 4px rgba(255,255,255,0.5);
+            top: -2px;
+        }
+        .kesfet:active {
+            background: linear-gradient(to top, #f7f3ef, #e5dcd3);
+            box-shadow: 
+                0 1px 2px rgba(0,0,0,0.1),
+                inset 0 2px 4px rgba(0,0,0,0.1);
+            top: 1px;
         }
     </style>
 </head>
