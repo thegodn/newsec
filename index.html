@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rarart Interactive Store</title>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
     <style>
-        .text-section p {
-            font-family: 'Edu AU VIC WA NT Hand', cursive;
-}
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', regular;
+        }
         .container {
             display: flex;
             height: 550px;
@@ -60,11 +62,11 @@
         p {
             margin-bottom: 30px;
             line-height: 1.5;
-            font-family: 'Great Vibes', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 20px;
         }
-         .kesfet {
-            background: linear-gradient(to bottom, #f7f3ef, #e5dcd3);
+        .kesfet {
+            background-color: #f2ede9;
             border: none;
             color: #7c8c7d;
             padding: 15px 30px;
@@ -73,31 +75,12 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             border-radius: 30px;
-            box-shadow: 
-                0 2px 4px rgba(0,0,0,0.1),
-                0 4px 8px rgba(0,0,0,0.1),
-                inset 0 -2px 4px rgba(0,0,0,0.05),
-                inset 0 2px 4px rgba(255,255,255,0.5);
-            transition: all 0.3s ease;
-            position: relative;
-            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s, color 0.3s;
             align-self: flex-start;
         }
         .kesfet:hover {
-            background: linear-gradient(to bottom, #f2ede9, #d8cfc6);
-            box-shadow: 
-                0 4px 8px rgba(0,0,0,0.15),
-                0 8px 16px rgba(0,0,0,0.15),
-                inset 0 -2px 4px rgba(0,0,0,0.1),
-                inset 0 2px 4px rgba(255,255,255,0.5);
-            top: -2px;
-        }
-        .kesfet:active {
-            background: linear-gradient(to top, #f7f3ef, #e5dcd3);
-            box-shadow: 
-                0 1px 2px rgba(0,0,0,0.1),
-                inset 0 2px 4px rgba(0,0,0,0.1);
-            top: 1px;
+            background-color: #e5dcd3;
         }
     </style>
 </head>
@@ -108,14 +91,24 @@
         </div>
         <div class="text-section">
             <ul>
-                <li class="active" data-image="url('https://i.ibb.co/YcL6Y96/duvar-dekoru.png')">Duvar Dekoru</li>
-                <li data-image="url('https://i.ibb.co/gPMVmkN/masa-st.png')">Masaüstü Aksesuarları</li>
-                <li data-image="url('https://i.ibb.co/jLp7Nt0/bah-e.png')">Bahçe Dekoru</li>
-                <li data-image="url('https://i.ibb.co/VJdb5Tp/zel-tasar-mlar.png')">Özel Tasarımlar</li>
-                <li data-image="url('https://i.ibb.co/kXfNYvJ/f-rsat-r-nleri.png')">Fırsat Ürünleri</li>
+                <li class="active" data-image="url('https://i.ibb.co/YcL6Y96/duvar-dekoru.png')">
+                    <a href="rarart.com/duvar-dekoru" style="text-decoration: none; color: inherit;">Duvar Dekoru</a>
+                </li>
+                <li data-image="url('https://a.storyblok.com/f/165154/1280x720/1d75d692c3/hero-image_1280x720-3.jpg/m/')">
+                    <a href="masaustu-aksesuarlar.html" style="text-decoration: none; color: inherit;">Masaüstü Aksesuarları</a>
+                </li>
+                <li data-image="url('https://images.unsplash.com/photo-1523309375637-b3f4f2347f2d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                    <a href="bahce-dekoru.html" style="text-decoration: none; color: inherit;">Bahçe Dekoru</a>
+                </li>
+                <li data-image="url('https://plus.unsplash.com/premium_photo-1661963949823-3d9127d3a87e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                    <a href="ozel-tasarimlar.html" style="text-decoration: none; color: inherit;">Özel Tasarımlar</a>
+                </li>
+                <li data-image="url('https://images.unsplash.com/photo-1517767563817-315c7d9c06bc?q=80&w=2037&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                    <a href="firsat-urunleri.html" style="text-decoration: none; color: inherit;">Fırsat Ürünleri</a>
+                </li>
             </ul>
             <p>Evinize zarafet ve sıcaklık katmak için Rarart ile tanışın. Duvar dekorları, düzenleyiciler ve daha fazlasıyla evinizi güzelleştirin. Her tarza uygun seçenekler mağazamızda sizi bekliyor.</p>
-            <button class="kesfet">Keşfet</button>
+            <a href="kesfet.html"><button class="kesfet">Keşfet</button></a>
         </div>
     </div>
 
@@ -134,7 +127,6 @@
             });
         });
 
-        // Set initial image
         mainImage.style.backgroundImage = document.querySelector('.active').dataset.image;
     </script>
 </body>
